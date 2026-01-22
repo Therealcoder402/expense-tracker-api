@@ -1,25 +1,28 @@
 package com.ogunniwa.expensetracker.controller;
 
 import com.ogunniwa.expensetracker.model.Expense;
-import com.ogunniwa.expensetracker.service.ExpenseManager;
+import com.ogunniwa.expensetracker.repository.ExpenseRepository;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/expenses")
 public class ExpenseController {
 
-    private ExpenseManager expenseManager = new ExpenseManager();
+    private final ExpenseRepository expenseRepository;
+
+    public ExpenseController(ExpenseRepository expenseRepository) {
+        this.expenseRepository = expenseRepository;
+    }
 
     @PostMapping
     public Expense createExpense(@RequestBody Expense expense) {
-        expenseManager.addExpense(expense);
-        return expense;
+        return expenseRepository.save(expense);
     }
 
     @GetMapping
-    public ArrayList<Expense> getAllExpenses() {
-        return expenseManager.getAllExpenses();
+    public List<Expense> getAllExpenses() {
+        return expenseRepository.findAll();
     }
 }
