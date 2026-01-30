@@ -1,78 +1,76 @@
-# \# Expense Tracker REST API
+\# Expense Tracker REST API
 
-# 
 
-# A REST API for tracking personal expenses. Built with Java and Spring Boot as a learning project to practice backend development.
 
-# 
+A REST API for tracking personal expenses. Built with Java and Spring Boot as a learning project to practice backend development.
 
-# \*\*Live API:\*\* https://expense-tracker-api-production-e043.up.railway.app 
 
-# 
 
-# \## What It Does
+\*\*Live API:\*\* https://expense-tracker-api-production-e043.up.railway.app
 
-# 
 
-# \- Register and login with JWT authentication
 
-# \- Create, view, update, and delete expenses
+\## What It Does
 
-# \- All expense endpoints are protected — you need a valid token
 
-# 
 
-# \## Built With
+\- Register and login with JWT authentication
 
-# 
+\- Create, view, update, and delete expenses
 
-# \- Java 17
+\- All expense endpoints are protected - you need a valid token
 
-# \- Spring Boot
 
-# \- Spring Security (JWT)
 
-# \- PostgreSQL
+\## Built With
 
-# \- Deployed on Railway
 
-# 
 
-# \## Endpoints
+\- Java 17
 
-# 
+\- Spring Boot
 
-# \*\*Auth:\*\*
+\- Spring Security (JWT)
 
-# \- `POST /auth/register` — create account
+\- PostgreSQL
 
-# \- `POST /auth/login` — get token
+\- Deployed on Railway
 
-# 
 
-# \*\*Expenses (need token):\*\*
 
-# \- `GET /expenses` — list all
+\## Endpoints
 
-# \- `GET /expenses/{id}` — get one
 
-# \- `POST /expenses` — create
 
-# \- `PUT /expenses/{id}` — update
+\*\*Auth:\*\*
 
-# \- `DELETE /expenses/{id}` — delete
+\- POST /auth/register - create account
 
-# 
+\- POST /auth/login - get token
 
-# \## Run Locally
 
-# ```bash
 
-# ./mvnw spring-boot:run
+\*\*Expenses (need token):\*\*
 
-# ```
+\- GET /expenses - list all
 
-# 
+\- GET /expenses/{id} - get one
 
-# Then visit `http://localhost:8080`
+\- POST /expenses - create
+
+\- PUT /expenses/{id} - update
+
+\- DELETE /expenses/{id} - delete
+
+
+
+\## Run Locally
+
+
+
+./mvnw spring-boot:run
+
+
+
+Then visit http://localhost:8080
 
