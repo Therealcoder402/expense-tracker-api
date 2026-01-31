@@ -1,6 +1,6 @@
 ﻿# Expense Tracker REST API
 
-A REST API for tracking personal expenses. Built with Java and Spring Boot as a learning project to practice backend development.
+A secure REST API for tracking personal expenses, built with Java and Spring Boot. The application supports user authentication, expense management, and persistent data storage.
 
 **Live API:** https://expense-tracker-api-production-e043.up.railway.app
 
